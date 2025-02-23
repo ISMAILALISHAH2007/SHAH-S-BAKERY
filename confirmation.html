@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Confirmation - SHAH Bakers</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <div class="logo">
+      <img src="images/SHAH.jpg" alt="Sweet Delights Bakery Logo">
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#menu">Menu</a></li>
+        <li><a href="index.html#gallery">Gallery</a></li>
+        <li><a href="index.html#testimonials">Testimonials</a></li>
+        <li><a href="index.html#about">About Us</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Confirmation Section -->
+  <section class="confirmation">
+    <div class="confirmation-content">
+      <h2>Thank You for Your Order!</h2>
+      <p id="confirmation-message"></p>
+      <div id="order-details">
+        <h3>Your Order Details</h3>
+        <ul id="order-items"></ul>
+        <p id="order-total"></p>
+      </div>
+      <p>We appreciate your business and look forward to serving you again soon!</p>
+      <div class="social-media">
+        <p>Follow us on social media:</p>
+        <div class="social-links">
+          <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+          <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+      <a href="index.html" class="btn btn-primary">Back to Home</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 SHAH Bakers. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Display confirmation message and order details
+    const urlParams = new URLSearchParams(window.location.search);
+    const name = decodeURIComponent(urlParams.get('name'));
+    const total = urlParams.get('total');
+    const items = JSON.parse(decodeURIComponent(urlParams.get('items')));
+
+    document.getElementById('confirmation-message').textContent = `Hi ${name}, your order has been placed successfully!`;
+
+    const orderItemsList = document.getElementById('order-items');
+    items.forEach(item => {
+      const li = document.createElement('li');
+      li.textContent = `${item.item} - $${item.price.toFixed(2)}`;
+      orderItemsList.appendChild(li);
+    });
+
+    document.getElementById('order-total').textContent = `Total: $${total}`;
+  </script>
+</body>
+</html>

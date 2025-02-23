@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SHAH Bakers</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- Loading Spinner -->
+  <div class="loader">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Header Section -->
+  <header>
+    <div class="logo">
+      <img src="images/SHAH.jpg" alt="Sweet Delights Bakery Logo" >
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="hamburger">
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Menu Section -->
+  <section id="menu" class="menu">
+    <h2>Our Menu</h2>
+    <div class="menu-items">
+      <div class="item" data-item="Custom Cake" data-price="25" data-details="Delicious cakes for every occasion. Customize your cake with flavors, fillings, and decorations.">
+        <img src="images/cake1.jpg" alt="Cake" width="612px" height="410px">
+        <h3>Custom Cakes</h3>
+        <p>Delicious cakes for every occasion.</p>
+        <a href="order.html" class="btn">Order Now</a>
+      </div>
+      <div class="item" data-item="Pastry" data-price="5" data-details="Flaky, buttery, and oh-so-good. Choose from a variety of pastries like croissants, danishes, and more.">
+        <img src="images/pastry1.jpg" alt="Pastry"  width="612px" height="410px">
+        <h3>Pastries</h3>
+        <p>Flaky, buttery, and oh-so-good.</p>
+        <a href="order.html" class="btn">Order Now</a>
+      </div>
+      <div class="item" data-item="Artisan Bread" data-price="8" data-details="Freshly baked daily. Our artisan bread is made with the finest ingredients and traditional techniques.">
+        <img src="images/bread1.jpg" alt="Bread" width="612px" height="410px">
+        <h3>Artisan Bread</h3>
+        <p>Freshly baked daily.</p>
+        <a href="order.html" class="btn">Order Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Details Modal -->
+  <div id="product-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 id="modal-title"></h2>
+      <p id="modal-description"></p>
+      <p id="modal-price"></p>
+    </div>
+  </div>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery-grid">
+      <img src="images/gallery1.jpg" alt="Gallery Image 1" width="612px" height="290px">
+      <img src="images/gallery2.jpg" alt="Gallery Image 2"width="612px" height="290px">
+      <img src="images/gallery3.jpg" alt="Gallery Image 3"width="612px" height="290px">
+      <img src="images/gallery4.jpg" alt="Gallery Image 4"width="612px" height="290px">
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="testimonials">
+    <h2>What Our Customers Say</h2>
+    <div class="testimonial-items">
+      <div class="testimonial">
+        <p>"The best bakery in town! Their cakes are heavenly."</p>
+        <span>- ISMAIL</span>
+      </div>
+      <div class="testimonial">
+        <p>"I can't get enough of their pastries. Highly recommend!"</p>
+        <span>- AFNAN</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <p>We are a family-owned bakery dedicated to creating the finest baked goods using traditional recipes and the freshest ingredients.</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>Visit us at: 123 Bakery Street, Sweet City</p>
+    <p>Call us: (123) 456-7890</p>
+    <p>Email: info@ismailalishah2007@gmail.com</p>
+    <div class="map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.8354345093747!2d144.9537353153166!3d-37.816279742021665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577d5a32f5c7f3!2s123%20Bakery%20St%2C%20Sweet%20City%20VIC%203000%2C%20Australia!5e0!3m2!1sen!2sus!4v1633023226787!5m2!1sen!2sus" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="newsletter">
+    <h2>Subscribe to Our Newsletter</h2>
+    <form id="newsletter-form">
+      <input type="email" id="email" placeholder="Enter your email" required>
+      <button type="submit">Subscribe</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="social-media">
+      <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+    </div>
+    <p>&copy; 2025 SHAH Bakers. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
